@@ -1,0 +1,114 @@
+{% extends "All_Tools_Pages/headerfooter.html" %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+
+{% block content %}
+<style>
+
+   
+
+    .btn:hover{
+        /* content: This is it; */
+        /* padding:70px; */
+        transition: all ease-in-out .5s;
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        box-shadow: 0px 5px 15px black;      
+        background-color: #c1264c;  
+    }
+
+    .btn{
+        overflow:hidden;
+        height:150px;
+        /* padding:50px; */
+        position: relative;
+
+    
+    }
+
+    .hovered:hover{
+        margin:0px;
+    }
+    
+    #background-pic{
+        background-image:url("/static/admin/img/image72.jpg");
+        background: cover;
+        border-radius : 0px 0px 10px 10px;
+    }
+
+</style>
+
+{% load static %}
+<body>
+
+    <!-- <img  src=" {% static "admin/img/image72.jpg" %}"> -->
+    
+
+    <div class="row" style="margin-top:50px; margin-left:10px; margin-right:10px;">
+        <div class="col-sm-3 col-12" style="height:50%;">   
+            <div class="row" style="height:50%; padding:10%">
+                <a href="/throughput_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true">
+                     Throughput Estimation Tool (includeing BLER) <p class="text-center fs-6">Calculates Througput for the log file</p></a>
+            </div>
+            <div class="row" style="height:50%; padding:10%">
+                <a href="/re_mapping_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true"> 
+                    RE Mapping <p class="text-center fs-6"> Plot a RE Graph</p>
+                 </a>
+            </div>
+        </div>
+        
+        <div class="col-sm-3 col-12" style="height:50%;">
+            <div class="row" style="height:50%;padding:10%">
+                <a href="/du_log_parser_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true">
+                    DU Log Dashboard <p class="text-center fs-6">Convert your DU log into interactive graph</p>
+                </a>
+            </div>
+            <div class="row" style="height:50%;padding:10%">
+                <a href="/qual_log_parsing_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true"> 
+                Qualcomm Log Analytical Tool <p class="text-center fs-6">Plot a graph for Qualcomm UE Logs</p>
+                </a>
+
+            </div>
+        </div>
+        <div class="col-sm-3 col-12" style="height:50%;">
+            <div class="row" style="height:50%;padding:10% ">
+                <a href="/ptp_timing_delay_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true">
+                PTP (IEEE 1588 Logs Analysis) <p class="text-center fs-6"> Calculate the PTP Timing delay using phc2sys_log.log and ptp41_log.log file</p>
+                </a>
+            </div>
+            <div class="row" style="height:50%;padding:10%">
+                <a href="/ota_algo_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true"> 
+                OTA Algorithm Tool <p class="text-center fs-6">--</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-3 col-12" style="height:50%;">
+            <div class="row" style="height:50%;padding:10%">
+                <a href="/link_budget_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true">
+                 Link Budget Estimation <p class="text-center fs-6">Description for tool 6</p>
+                </a>
+            </div>
+            <div class="row" style="height:50%;padding:10%">
+                <a href="/nr_arfcn_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true"> 
+                    NR-ARFCN-GSCN Calculator <p class="text-center fs-6">Description for tool 7</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="row text-center">
+        <div class=" col-sm-6 col-12 ">
+            <a href="/odu_cpu_utilization_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true">
+                Radisys ODU CPU Utilization Analysis <p class="text-center fs-6">Description for tool 6</p>
+               </a>
+        </div>
+        <div class=" col-sm-6 col-12">
+             <a href="/global_result_tool" class="btn btn-outline-success btn-lg fs-4 text-start" role="button" aria-disabled="true">
+            Global Result for ODU Product <p class="text-center fs-6">Description for tool 6</p>
+           </a>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
+
